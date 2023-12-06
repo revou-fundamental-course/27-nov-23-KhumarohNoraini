@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator segitiga</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <h1>Welcome To Multi Function Calculator</h1>
+    </header>
+    <main class="main-container">
+      <div class="main-wrapper">
+        <section class="hero-section">
+          <div class="hero-option">
+            <div class="shapes-option">
+              <label for="shapes">Bangun Datar :</label>
+              <select name="shapes" id="shape-option">
+                <optgroup label="Segitiga">
+                  <option value="Keliling Segitiga">Keliling Segitiga</option>
+                  <option value="Luas Segitiga">Luas Segitiga</option>
+                </optgroup>
+                <optgroup label="Jajar Genjang">
+                  <option value="Keliling Jajar Genjang">
+                    Keliling Jajar Genjang
+                  </option>
+                  <option value="Luas Jajar Genjang">Luas Jajar Genjang</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="length-unit-option">
+              <label for="length-unit">Satuan Panjang :</label>
+              <select name="length-unit" id="length-unit-option" value="">
+                <option value="km">km</option>
+                <option value="hm">hm</option>
+                <option value="dam">dam</option>
+                <option value="m">m</option>
+                <option value="dm">dm</option>
+                <option selected value="cm">cm</option>
+                <option value="mm">mm</option>
+              </select>
+            </div>
+          </div>
+          <div class="hero-header-container">
+            <!-- Value set using Javascript (./src/script.js) -->
+            <p id="hero-header"></p>
+          </div>
+          <div class="hero-image-container">
+            <!-- Source set using Javascript (./src/script.js) -->
+            <img id="hero-image" />
+          </div>
+        </section>
+        <section class="input-form-calculator">
+          <form>
+            <p class="form-header">Calculator</p>
+            <div class="input-container">
+              <label for="input-value">Masukkan Nilai :</label>
+              <input type="number" id="first-number" name="input-value" />
+              <input type="number" id="second-number" name="input-value" />
+              <input type="number" id="third-number" name="input-value" />
+            </div>
+            <div class="button-container">
+              <button type="button" id="hitung-button">Hitung</button>
+              <button type="button" id="reset-button">Reset</button>
+            </div>
+          </form>
+          <div class="results-container">
+            <div id="result">
+              <p>Hasil :</p>
+              <div id="output-desc"></div>
+              <div id="output"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

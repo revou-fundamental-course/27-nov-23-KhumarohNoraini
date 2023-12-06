@@ -1,0 +1,325 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  /* background-color: #f0e5cf; */
+  background-color: rgb(0, 146, 162);
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Header */
+.header-container {
+  width: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d3d3b;
+  color: #f0e5cf;
+}
+.header-container p {
+  font-style: italic;
+}
+
+/* Main Content */
+.main-container {
+  width: 100%;
+  height: 80vh;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.main-wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.hero-section {
+  width: 50%;
+  height: 100%;
+}
+.hero-option {
+  height: max-content;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #333;
+}
+.hero-option label {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.hero-option select {
+  padding: 4px;
+  border-radius: 5px;
+}
+.hero-header-container {
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-header-container #hero-header {
+  font-size: 2rem;
+}
+.hero-image-container {
+  width: 100%;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+}
+.hero-image-container #hero-image {
+  max-width: 80%;
+  max-height: 50%;
+  aspect-ratio: 16/9;
+}
+
+/* Input Form */
+.input-form-calculator {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #c8c6c6;
+  color: #000;
+}
+.input-form-calculator form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.input-form-calculator form .form-header {
+  width: 100%;
+  padding: 4px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-form-calculator form .input-container {
+  width: 70%;
+  height: 70%;
+  padding: 10px;
+  display: flex;
+  justify-self: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.input-form-calculator form .input-container input {
+  width: 100%;
+  height: 30px;
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+}
+.input-form-calculator form .button-container {
+  width: 70%;
+  padding: 0 8px;
+  align-self: flex-start;
+  gap: 14px;
+}
+.input-form-calculator form .button-container button {
+  width: 70px;
+  font-weight: bolder;
+  padding: 8px;
+  border: 3px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.button-container #hitung-button {
+  background-color: #4fcca3;
+  transition: 0.4s;
+}
+.button-container #hitung-button:hover {
+  background-color: #009765;
+  color: #f0e5cf;
+}
+.button-container #reset-button {
+  background-color: #f12e5f;
+  transition: 0.4s;
+}
+.button-container #reset-button:hover {
+  background-color: #ca0033;
+  color: #f0e5cf;
+}
+
+/* Result */
+.results-container {
+  width: 100%;
+  height: 40%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.results-container #result {
+  width: 100%;
+  padding: 4px;
+}
+.results-container #output {
+  width: 100%;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+  .hero-option {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-option label {
+    font-size: 0.8rem;
+  }
+  .hero-option select {
+    padding: 2px;
+  }
+  .hero-option optgroup,
+  .hero-option option {
+    font-size: 0.7rem;
+  }
+  .input-form-calculator form {
+    width: 100%;
+    height: 65%;
+  }
+  .input-form-calculator .input-container {
+    align-self: flex-start;
+  }
+  .input-form-calculator .button-container #hitung-button,
+  .input-form-calculator .button-container #reset-button {
+    padding: 5px;
+  }
+  .hero-header-container #hero-header,
+  .input-form-calculator form .form-header {
+    font-size: 1.8rem;
+  }
+  .results-container #output-desc,
+  .results-container #output {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  body {
+    width: 100%;
+  }
+  .header-container {
+    height: 70px;
+    padding: 16px 0;
+    font-size: 0.9em;
+  }
+  .main-container {
+    height: max-content;
+    width: 100%;
+    padding: 5%;
+  }
+  .main-wrapper {
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-section,
+  .input-form-calculator {
+    width: 80%;
+  }
+  .hero-option {
+    gap: 5px;
+  }
+  .hero-option label {
+    font-size: 0.8rem;
+  }
+  .hero-option select {
+    padding: 3px;
+  }
+  .hero-option .shapes-option select {
+    width: 140px;
+  }
+  .hero-option optgroup,
+  .hero-option option {
+    font-size: 0.6rem;
+  }
+  .hero-header-container #hero-header,
+  .input-form-calculator form .form-header {
+    font-size: 1.6rem;
+  }
+  .input-form-calculator {
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .input-form-calculator form {
+    width: 75%;
+    align-items: center;
+  }
+  .input-form-calculator form .input-container {
+    width: 80%;
+  }
+  .results-container #output-desc,
+  .results-container #output {
+    font-size: 0.8rem;
+  }
+  .footer-container .dev img {
+    height: 45px;
+    width: 45px;
+  }
+  .footer-container .dev {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main-wrapper {
+    width: 100%;
+  }
+  .header-container {
+    height: 50px;
+    font-size: 8px;
+  }
+  .hero-image-container #hero-image {
+    width: 380px;
+    height: 175px;
+  }
+  .hero-header-container #hero-header,
+  .input-form-calculator form .form-header {
+    font-size: 20px;
+  }
+  .input-form-calculator button {
+    padding: 1px;
+    font-size: 10px;
+  }
+  .input-form-calculator form {
+    width: 100%;
+  }
+  .input-form-calculator form .input-container {
+    width: 90%;
+  }
+  .input-form-calculator label {
+    font-size: 12px;
+  }
+  .results-container p {
+    font-size: 12px;
+  }
+  .footer-container {
+    height: 65px;
+    font-size: 14px;
+  }
+  .footer-container .dev img {
+    height: 38px;
+    width: 38px;
+  }
+}
